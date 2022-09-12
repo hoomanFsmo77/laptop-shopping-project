@@ -1,0 +1,251 @@
+@import "Variables";
+///// margin
+$m:0;$c:0;
+@while($m < 7){
+  .m-#{$c}{
+    margin: $m+rem !important;
+  }
+  .p-#{$c}{
+    padding: $m+rem !important;
+  }
+  $m:$m + 0.25;
+  $c:$c+1;
+}
+///// margin x
+$mx:0;$cx:0;
+@while($mx < 7){
+  .mx-#{$cx}{
+    margin-right: $mx+rem !important;
+    margin-left: $mx+rem !important;
+  }
+  .px-#{$cx}{
+    padding-right: $mx+rem !important;
+    padding-left: $mx+rem !important;
+  }
+  $mx:$mx + 0.25;
+  $cx:$cx+1;
+}
+////// margin y
+$my:0;$cy:0;
+@while($my < 7){
+  .my-#{$cy}{
+    margin-top: $my+rem !important;
+    margin-bottom: $my+rem !important;
+  }
+  .py-#{$cy}{
+    padding-top: $my+rem !important;
+    padding-bottom: $my+rem !important;
+  }
+  $my:$my + 0.25;
+  $cy:$cy+1;
+}
+/////// margin top
+$mt:0;$ct:0;
+@while($mt < 7){
+  .mt-#{$ct}{
+    margin-top: $mt+rem !important;
+  }
+  .pt-#{$ct}{
+    padding-top: $mt+rem !important;
+  }
+  $mt:$mt + 0.25;
+  $ct:$ct+1;
+}
+//////// margin bottom
+$mb:0;$cb:0;
+@while($mb < 7){
+  .mb-#{$cb}{
+    margin-bottom: $mb+rem !important;
+  }
+  .pb-#{$cb}{
+    padding-bottom: $mb+rem !important;
+  }
+  $mb:$mb + 0.25;
+  $cb:$cb+1;
+}
+//////// margin right
+$mr:0;$cr:0;
+@while($mr < 7){
+  .mr-#{$cr}{
+    margin-right: $mr+rem !important;
+  }
+  .pr-#{$cr}{
+    padding-right: $mr+rem !important;
+  }
+  $mr:$mr + 0.25;
+  $cr:$cr+1;
+}
+/////// margin left
+$ml:0;$cl:0;
+@while($ml < 7){
+  .ml-#{$cl}{
+    margin-left: $ml+rem !important;
+  }
+  .pl-#{$cl}{
+    padding-left: $ml+rem !important;
+  }
+  $ml:$ml + 0.25;
+  $cl:$cl+1;
+}
+////////// line height
+@for $lh from 0 through 10{
+  .lh-#{$lh}{
+    line-height: $lh !important;
+  }
+}
+///////// font size
+$fs:0.5;$of:1;
+@while($fs < 8){
+  .fs-#{$of}{
+    font-size: $fs+rem!important;
+  }
+  $fs:$fs+0.5;
+  $of:$of +1
+}
+//////// font wight
+$fw:100;$cw:1;
+@while($fw<1000){
+  .fw-#{$cw}{
+    font-weight: $fw!important;
+  }
+  $cw:$cw+1;
+  $fw:$fw + 100
+}
+/////////// gap
+$gp:0.5;$cg:1;
+@while($cg < 10){
+  .gap-#{$cg}{
+    gap: $gp+rem;
+  }
+  $cg:$cg+1;
+  $gp:$gp+0.5
+}
+///////// width
+$wd:0.1;$cf:10;
+@while($wd < 1.1){
+  .w-#{$cf}{
+    width: percentage($wd)  !important;
+  }
+  .h-#{$cf}{
+    height: percentage($wd)!important;
+  }
+  $wd:$wd+0.1;
+  $cf:$cf +10
+}
+
+/////////// display flex
+.d-flex{
+  display: flex!important;
+  display: -moz-flex!important;
+  display: -webkit-flex!important;
+  display: -o-flex!important;
+  display: -ms-flex!important;
+}
+.flex-row{
+  flex-direction:row !important;
+  -webkit-flex-direction: row!important;
+}
+.flex-column{
+  flex-direction:column !important;
+  -webkit-flex-direction: column!important;
+}
+.flex-reverse{
+  flex-direction:row-reverse !important;
+  -webkit-flex-direction: row-reverse!important;
+}
+.justify-center{
+  justify-content:center !important;
+  -webkit-justify-content: center !important;
+}
+.justify-between{
+  justify-content:space-between !important;
+  -webkit-justify-content: space-between !important;
+}
+.justify-start{
+  justify-content:start !important;
+  -webkit-justify-content: flex-start !important;
+}
+.justify-end{
+  justify-content:end !important;
+  -webkit-justify-content: flex-end !important;
+}
+.align-center{
+  align-items: center!important;
+  -webkit-align-items: center!important;
+}
+.align-start{
+  align-items: start!important;
+  -webkit-align-items: flex-start!important;
+}
+.align-end{
+  align-items: end!important;
+  -webkit-align-items: flex-end!important;
+}
+.d-none{
+  display: none!important;
+}
+.d-block{
+  display: block!important;
+}
+.d-inline-block{
+  display: inline-block!important;
+}
+
+//////// positions
+.relative{
+  position: relative;
+}
+.absolute{
+  position: absolute;
+}
+//////// grid
+.column_4{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  justify-items: center;
+  align-items:center ;
+  gap: 3rem;
+}
+.center{
+  text-align: center!important;
+}
+.text-white{
+  color: #fefefe;
+}
+.bg_green{
+  background: $memory!important;
+  &:hover{
+    background: rgba(0,214,32,0.84)!important;
+  }
+}
+.text-green{
+  color: $memory;
+}
+.bg_gold{
+  background: $cpu!important;
+  &:hover{
+    background: rgba(214,137,0,0.84) !important;
+  }
+}
+.text-gold{
+  color: $cpu;
+}
+.bg_blue{
+  background: $hard!important;
+  &:hover{
+    background: rgba(23,68,214,0.84)!important;
+  }
+}
+.text-blue{
+  color: $hard;
+}
+.text-dark{
+  color: #333;
+}
+.overflow_auto{
+  overflow: auto;
+}
+.sticky{
+  position: sticky;
+  top: 37px;
+}
